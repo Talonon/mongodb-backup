@@ -155,7 +155,7 @@ function rmDir(pathname, next) {
  */
 function toJsonAsync(doc, collectionPath) {
 
-  fs.writeFile(collectionPath + doc._id + '.json', JSON.stringify(doc));
+  fs.writeFileSync(collectionPath + doc._id + '.json', JSON.stringify(doc));
 }
 
 /**
@@ -167,7 +167,7 @@ function toJsonAsync(doc, collectionPath) {
  */
 function toBsonAsync(doc, collectionPath) {
 
-  fs.writeFile(collectionPath + doc._id + '.bson', BSON.serialize(doc));
+  fs.writeFileSync(collectionPath + doc._id + '.bson', BSON.serialize(doc));
 }
 
 /**
